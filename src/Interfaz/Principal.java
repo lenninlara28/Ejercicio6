@@ -111,13 +111,18 @@ public class Principal extends javax.swing.JFrame {
 
     private void cmbHacerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmbHacerActionPerformed
         String total;
-        int palabras,tamaño,color,p,t,c;
+        int palabras,tamaño,color,p,t,c,valor;
         palabras=Integer.parseInt(txtNpalabras.getText());
         tamaño=Integer.parseInt(txtTaviso.getText());
         color=Integer.parseInt(txtColor.getText());
        p=20000*palabras;
        t=15000*tamaño;
        c=25000*color;
+       valor=p+t+c;
+       
+       total=String.valueOf(valor);
+        txtValor.setText("$"+total);
+        
         
     }//GEN-LAST:event_cmbHacerActionPerformed
 
