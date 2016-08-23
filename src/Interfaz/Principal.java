@@ -5,6 +5,7 @@
  */
 package Interfaz;
 
+import javax.swing.JComponent;
 import javax.swing.JOptionPane;
 
 /**
@@ -68,7 +69,7 @@ public class Principal extends javax.swing.JFrame {
 
         txtNpalabras.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtNpalabrasActionPerformed(evt);
+                ActionListener(evt);
             }
         });
         txtNpalabras.addKeyListener(new java.awt.event.KeyAdapter() {
@@ -82,6 +83,11 @@ public class Principal extends javax.swing.JFrame {
         jLabel3.setText("Centimetros de su aviso");
         jPanel2.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 80, 150, -1));
 
+        txtTaviso.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ActionListener(evt);
+            }
+        });
         txtTaviso.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 txtTavisoKeyTyped(evt);
@@ -93,6 +99,11 @@ public class Principal extends javax.swing.JFrame {
         jLabel4.setText("Cuantos Colores Levara");
         jPanel2.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 110, -1, -1));
 
+        txtColor.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ActionListener(evt);
+            }
+        });
         txtColor.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 txtColorKeyTyped(evt);
@@ -105,6 +116,7 @@ public class Principal extends javax.swing.JFrame {
         cmbHacer.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cmbHacerActionPerformed(evt);
+                ActionListener(evt);
             }
         });
         jPanel2.add(cmbHacer, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 140, -1, -1));
@@ -163,13 +175,10 @@ public class Principal extends javax.swing.JFrame {
        
        total=String.valueOf(valor);
         txtValor.setText("$"+total);
+        
         }
         
     }//GEN-LAST:event_cmbHacerActionPerformed
-
-    private void txtNpalabrasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNpalabrasActionPerformed
-        
-    }//GEN-LAST:event_txtNpalabrasActionPerformed
 
     private void txtNpalabrasKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtNpalabrasKeyTyped
        char c=evt.getKeyChar(); 
@@ -202,6 +211,10 @@ public class Principal extends javax.swing.JFrame {
         txtValor.setText("");
         txtNpalabras.requestFocusInWindow();
     }//GEN-LAST:event_cmbNuevoActionPerformed
+
+    private void ActionListener(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ActionListener
+       ((JComponent) evt.getSource()).transferFocus();
+    }//GEN-LAST:event_ActionListener
 
     /**
      * @param args the command line arguments
