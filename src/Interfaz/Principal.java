@@ -5,6 +5,8 @@
  */
 package Interfaz;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author hp 14
@@ -63,16 +65,39 @@ public class Principal extends javax.swing.JFrame {
         jLabel2.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel2.setText("Cual es el numero de palabras");
         jPanel2.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 50, -1, -1));
+
+        txtNpalabras.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtNpalabrasActionPerformed(evt);
+            }
+        });
+        txtNpalabras.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtNpalabrasKeyTyped(evt);
+            }
+        });
         jPanel2.add(txtNpalabras, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 50, 100, -1));
 
         jLabel3.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel3.setText("Centimetros de su aviso");
         jPanel2.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 80, 150, -1));
+
+        txtTaviso.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtTavisoKeyTyped(evt);
+            }
+        });
         jPanel2.add(txtTaviso, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 80, 100, -1));
 
         jLabel4.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel4.setText("Cuantos Colores Levara");
         jPanel2.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 110, -1, -1));
+
+        txtColor.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtColorKeyTyped(evt);
+            }
+        });
         jPanel2.add(txtColor, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 110, 110, -1));
 
         cmbHacer.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
@@ -112,6 +137,17 @@ public class Principal extends javax.swing.JFrame {
     private void cmbHacerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmbHacerActionPerformed
         String total;
         int palabras,tamaño,color,p,t,c,valor;
+        
+        if (txtNpalabras.getText().trim().isEmpty()){
+         JOptionPane.showMessageDialog(this,"Digite El Numero de Palabras ","error", JOptionPane.ERROR_MESSAGE);
+         txtNpalabras.requestFocusInWindow();}
+        else if (txtTaviso.getText().trim().isEmpty()){
+         JOptionPane.showMessageDialog(this,"Digite El Tamaño ","error", JOptionPane.ERROR_MESSAGE);
+         txtTaviso.requestFocusInWindow();}
+        else if (txtColor.getText().trim().isEmpty()){
+         JOptionPane.showMessageDialog(this,"Digite Cuantos Colores ","error", JOptionPane.ERROR_MESSAGE);
+         txtColor.requestFocusInWindow();}
+        else {
         palabras=Integer.parseInt(txtNpalabras.getText());
         tamaño=Integer.parseInt(txtTaviso.getText());
         color=Integer.parseInt(txtColor.getText());
@@ -122,9 +158,37 @@ public class Principal extends javax.swing.JFrame {
        
        total=String.valueOf(valor);
         txtValor.setText("$"+total);
-        
+        }
         
     }//GEN-LAST:event_cmbHacerActionPerformed
+
+    private void txtNpalabrasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNpalabrasActionPerformed
+        
+    }//GEN-LAST:event_txtNpalabrasActionPerformed
+
+    private void txtNpalabrasKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtNpalabrasKeyTyped
+       char c=evt.getKeyChar(); 
+         
+          if(Character.isLetter(c)) { 
+              getToolkit().beep(); 
+              evt.consume();}
+    }//GEN-LAST:event_txtNpalabrasKeyTyped
+
+    private void txtTavisoKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtTavisoKeyTyped
+        char c=evt.getKeyChar(); 
+         
+          if(Character.isLetter(c)) { 
+              getToolkit().beep(); 
+              evt.consume();}
+    }//GEN-LAST:event_txtTavisoKeyTyped
+
+    private void txtColorKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtColorKeyTyped
+        char c=evt.getKeyChar(); 
+         
+          if(Character.isLetter(c)) { 
+              getToolkit().beep(); 
+              evt.consume();}
+    }//GEN-LAST:event_txtColorKeyTyped
 
     /**
      * @param args the command line arguments
