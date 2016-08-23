@@ -27,17 +27,78 @@ public class Principal extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jPanel1 = new javax.swing.JPanel();
+        jPanel2 = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        txtNpalabras = new javax.swing.JTextField();
+        jLabel3 = new javax.swing.JLabel();
+        txtTaviso = new javax.swing.JTextField();
+        jLabel4 = new javax.swing.JLabel();
+        txtColor = new javax.swing.JTextField();
+        cmbHacer = new javax.swing.JButton();
+        jLabel5 = new javax.swing.JLabel();
+        txtValor = new javax.swing.JTextField();
+        cmbNuevo = new javax.swing.JButton();
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 100, Short.MAX_VALUE)
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 100, Short.MAX_VALUE)
+        );
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jLabel1.setText("Periodico Informador ");
+        jPanel2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, -1, -1));
+
+        jLabel2.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel2.setText("Cual es el numero de palabras");
+        jPanel2.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 50, -1, -1));
+        jPanel2.add(txtNpalabras, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 50, 100, -1));
+
+        jLabel3.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel3.setText("Tamaño De Su Aviso");
+        jPanel2.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 80, 140, -1));
+        jPanel2.add(txtTaviso, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 80, 100, -1));
+
+        jLabel4.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel4.setText("Cuantos Colores Levara");
+        jPanel2.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 110, -1, -1));
+        jPanel2.add(txtColor, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 110, 110, -1));
+
+        cmbHacer.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        cmbHacer.setText("Consultar Cuanto Cuesta");
+        jPanel2.add(cmbHacer, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 140, -1, -1));
+
+        jLabel5.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel5.setText("Su Aviso Clasificado Tiene Un Valor De ");
+        jPanel2.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 190, 240, -1));
+
+        txtValor.setEditable(false);
+        jPanel2.add(txtValor, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 210, 110, -1));
+
+        cmbNuevo.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        cmbNuevo.setText("Nueva Consulta ");
+        jPanel2.add(cmbNuevo, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 250, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
@@ -79,5 +140,18 @@ public class Principal extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton cmbHacer;
+    private javax.swing.JButton cmbNuevo;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
+    private javax.swing.JTextField txtColor;
+    private javax.swing.JTextField txtNpalabras;
+    private javax.swing.JTextField txtTaviso;
+    private javax.swing.JTextField txtValor;
     // End of variables declaration//GEN-END:variables
 }
