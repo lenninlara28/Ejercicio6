@@ -118,6 +118,11 @@ public class Principal extends javax.swing.JFrame {
 
         cmbNuevo.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         cmbNuevo.setText("Nueva Consulta ");
+        cmbNuevo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cmbNuevoActionPerformed(evt);
+            }
+        });
         jPanel2.add(cmbNuevo, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 250, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -189,6 +194,14 @@ public class Principal extends javax.swing.JFrame {
               getToolkit().beep(); 
               evt.consume();}
     }//GEN-LAST:event_txtColorKeyTyped
+
+    private void cmbNuevoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmbNuevoActionPerformed
+        txtNpalabras.setText("");
+        txtTaviso.setText("");
+        txtColor.setText("");
+        txtValor.setText("");
+        txtNpalabras.requestFocusInWindow();
+    }//GEN-LAST:event_cmbNuevoActionPerformed
 
     /**
      * @param args the command line arguments
