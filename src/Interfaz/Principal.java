@@ -66,9 +66,9 @@ public class Principal extends javax.swing.JFrame {
         jPanel2.add(txtNpalabras, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 50, 100, -1));
 
         jLabel3.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        jLabel3.setText("Tamaño De Su Aviso");
-        jPanel2.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 80, 140, -1));
-        jPanel2.add(txtTaviso, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 80, 100, -1));
+        jLabel3.setText("Centimetros de su aviso");
+        jPanel2.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 80, 150, -1));
+        jPanel2.add(txtTaviso, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 80, 100, -1));
 
         jLabel4.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel4.setText("Cuantos Colores Levara");
@@ -77,6 +77,11 @@ public class Principal extends javax.swing.JFrame {
 
         cmbHacer.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         cmbHacer.setText("Consultar Cuanto Cuesta");
+        cmbHacer.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cmbHacerActionPerformed(evt);
+            }
+        });
         jPanel2.add(cmbHacer, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 140, -1, -1));
 
         jLabel5.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
@@ -103,6 +108,18 @@ public class Principal extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void cmbHacerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmbHacerActionPerformed
+        String total;
+        int palabras,tamaño,color,p,t,c;
+        palabras=Integer.parseInt(txtNpalabras.getText());
+        tamaño=Integer.parseInt(txtTaviso.getText());
+        color=Integer.parseInt(txtColor.getText());
+       p=20000*palabras;
+       t=15000*tamaño;
+       c=25000*color;
+        
+    }//GEN-LAST:event_cmbHacerActionPerformed
 
     /**
      * @param args the command line arguments
